@@ -15,3 +15,18 @@
     }
     
 }
+
+.hero-button {
+    color: $color-link;
+    font-size: 3em;
+    display: inline-block;
+    margin: 0 .2em;
+    text-decoration: none;
+    border-bottom: 5px solid rgba(255, 255, 255, 0);
+    &:hover {
+        border-bottom-color: rgba(255, 255, 255, 1);
+        color: $color-link;
+    }
+}
+
+// transition: all 0s linear;

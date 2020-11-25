@@ -15,7 +15,7 @@
 
         ul {
             margin: 0;
-            padding: 7em;
+            padding: 6em;
             list-style: none;
             // position: fixed;
             top: 0;
@@ -43,6 +43,15 @@
         //     opacity: 0;
      }
         
+     a {
+        display: inline-block;
+        padding: 0 0 10px 0;
+
+        &:hover {
+            // text-decoration: underline;
+            border-bottom: 4px solid $color-link;
+        }
+    }
         // &[data-navstate="open"] {
 
         //     .menu-button {
@@ -72,6 +81,7 @@
         //         opacity: 1;
         //     }
         // }
+
     }
 
 /* FOOTER SITE-NAV */

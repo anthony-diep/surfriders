@@ -132,6 +132,19 @@ hr {
   background-color: rgba(61, 0, 0, 0);
 }
 
+.hero-button {
+  color: #ff5722;
+  font-size: 3em;
+  display: inline-block;
+  margin: 0 0.2em;
+  text-decoration: none;
+  border-bottom: 5px solid rgba(255, 255, 255, 0);
+}
+.hero-button:hover {
+  border-bottom-color: white;
+  color: #ff5722;
+}
+
 /* RESPONSIVE IMAGES */
 img {
   max-width: 100%;
@@ -148,6 +161,10 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 1em;
+}
+.container.news {
+  margin: 0;
+  padding: 0;
 }
 
 /* MEDIA QUERIES */
@@ -203,6 +220,7 @@ body {
   }
   .row .one-third {
     width: 31.333%;
+    display: flex;
   }
   .row .two-thirds {
     width: 64.666%;
@@ -252,9 +270,6 @@ body {
 .site-header a {
   color: white;
   text-decoration: none;
-}
-.site-header a:hover {
-  text-decoration: underline;
 }
 .site-header h1 {
   font-size: 1.5em;
@@ -314,7 +329,7 @@ section {
 /* SITE-HEADER SITE-NAV */
 .site-header .site-nav ul {
   margin: 0;
-  padding: 7em;
+  padding: 6em;
   list-style: none;
   top: 0;
   height: 100vh;
@@ -322,6 +337,13 @@ section {
 }
 .site-header .site-nav li {
   margin: 0 3em;
+}
+.site-header .site-nav a {
+  display: inline-block;
+  padding: 0 0 10px 0;
+}
+.site-header .site-nav a:hover {
+  border-bottom: 4px solid #ff5722;
 }
 
 /* FOOTER SITE-NAV */
@@ -335,123 +357,4 @@ section {
   display: inline-block;
   padding: 1em;
   line-height: 1;
-}
-
-/* ANIMATIONS */
-.hero .container *,
-.hero[data-sectionstate=inactive] .container * {
-  transition: all 1s ease-out;
-  opacity: 0;
-  transform: translate(0, -20px);
-}
-.hero .container *:nth-child(1),
-.hero[data-sectionstate=inactive] .container *:nth-child(1) {
-  transition-delay: 0.2s;
-}
-.hero .container *:nth-child(2),
-.hero[data-sectionstate=inactive] .container *:nth-child(2) {
-  transition-delay: 0.4s;
-}
-.hero .container *:nth-child(3),
-.hero[data-sectionstate=inactive] .container *:nth-child(3) {
-  transition-delay: 0.6s;
-}
-.hero .container *:nth-child(4),
-.hero[data-sectionstate=inactive] .container *:nth-child(4) {
-  transition-delay: 0.8s;
-}
-.hero .container *:nth-child(5),
-.hero[data-sectionstate=inactive] .container *:nth-child(5) {
-  transition-delay: 1s;
-}
-.hero[data-sectionstate=active] .container *,
-.hero[data-sectionstate=inactive][data-sectionstate=active] .container * {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-
-#Section01 .one-half:nth-child(1) {
-  transition: all 0.4s ease-out;
-  transform: translate(-50px, 0);
-}
-#Section01[data-sectionstate=active] .one-half:nth-child(1) {
-  transform: translate(0, 0);
-}
-#Section01 .one-half:nth-child(2) {
-  transition: all 0.4s ease-out;
-  transform: translate(50px, 0);
-}
-#Section01[data-sectionstate=active] .one-half:nth-child(2) {
-  transform: translate(0, 0);
-}
-
-#Section02 .one-half:nth-child(1) {
-  transition: all 0.4s ease-out;
-  transform: translate(-50px, -50px);
-}
-#Section02[data-sectionstate=active] .one-half:nth-child(1) {
-  transform: translate(0, 0);
-}
-#Section02 .one-half:nth-child(2) {
-  transition: all 0.4s ease-out;
-  transform: translate(50px, 50px);
-}
-#Section02[data-sectionstate=active] .one-half:nth-child(2) {
-  transform: translate(0, 0);
-}
-
-.animate-scale-in,
-[data-sectionstate=inactive] .animate-scale-in {
-  transition: all 1s ease-out;
-  opacity: 0;
-  transform: scale(0.8);
-}
-
-[data-sectionstate=active] .animate-scale-in {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.animate-slide-up,
-[data-sectionstate=inactive] .animate-slide-up {
-  transition: all 1s ease-out;
-  opacity: 0;
-  transform: translate(0, 100px);
-}
-
-[data-sectionstate=active] .animate-slide-up {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-
-.animate-drop-in-with-delay *,
-[data-sectionstate=inactive] .animate-drop-in-with-delay * {
-  transition: all 1s ease-out;
-  opacity: 0;
-  transform: translate(0, -20px);
-}
-.animate-drop-in-with-delay *:nth-child(1),
-[data-sectionstate=inactive] .animate-drop-in-with-delay *:nth-child(1) {
-  transition-delay: 0.2s;
-}
-.animate-drop-in-with-delay *:nth-child(2),
-[data-sectionstate=inactive] .animate-drop-in-with-delay *:nth-child(2) {
-  transition-delay: 0.4s;
-}
-.animate-drop-in-with-delay *:nth-child(3),
-[data-sectionstate=inactive] .animate-drop-in-with-delay *:nth-child(3) {
-  transition-delay: 0.6s;
-}
-.animate-drop-in-with-delay *:nth-child(4),
-[data-sectionstate=inactive] .animate-drop-in-with-delay *:nth-child(4) {
-  transition-delay: 0.8s;
-}
-.animate-drop-in-with-delay *:nth-child(5),
-[data-sectionstate=inactive] .animate-drop-in-with-delay *:nth-child(5) {
-  transition-delay: 1s;
-}
-
-[data-sectionstate=active] .animate-drop-in-with-delay * {
-  opacity: 1;
-  transform: translate(0, 0);
 }

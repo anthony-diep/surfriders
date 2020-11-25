@@ -28,6 +28,7 @@ $gridgap: 2%;
         align-items: flex-start;
     }
 
+
     @media (min-width: $breakpoint-small) {
 
         > * {
@@ -42,6 +43,7 @@ $gridgap: 2%;
         }
         .one-third {
             width: 33.333% - $gridgap;
+            display: flex;
         }
         .two-thirds {
             width: 66.666% - $gridgap;
