@@ -1,0 +1,18 @@
+.side-scroller {
+    background: black;
+    padding: 18px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    list-style: none;
+  
+    .item {
+      background: white;
+      min-width: 200px;
+      min-height: 200px;
+      padding: 0;
+      margin: 10px;
+    }
+  }
+  
+ 

@@ -35,6 +35,10 @@ h1 {
         font-size: 12em;
         margin: 0 0 0.1em 0; 
     }
+    &.ticket-block {
+        color: white;
+        margin-bottom: 0;
+    }
     &.schedule-header {
         font-size: 10em;
         font-size: 10vw;
@@ -48,11 +52,72 @@ h2 {
     &.ticket-header {
         font-size: 5em;
     }
+    &.roster-content-title {
+        color: $color-text-body-background;
+        margin: 0;
+    }
 }
 
 h3 {
     font-size: 1.5em;
     line-height: 1.2;
+    &.news-content-title {
+        color: $color-text-body-background;
+        margin: 0 0 1em 0;
+    }
+    &.roster-content-title {
+        color: $color-text-body-background;
+        margin: 0;
+    }
+}
+
+h4 {
+    &.roster-content-accent {
+        font-size: 1em;
+        color: $color-link;
+        margin: 0;
+        margin-bottom: 2em;
+    }
+}
+
+.news-content {
+    margin: auto;
+    padding: 17em 5em;
+    max-width: 75%;
+    color: $color-text-body-background;
+}
+
+.hero-text {
+    span {
+        display: inline-block;
+        color: white;
+    }
+    :nth-child(1) {
+        display: block;
+        font-size: 2em;
+        line-height: 2em;
+    }
+    :nth-child(2) {
+        font-size: 1em;
+        display: block;
+    }
+    :nth-child(3) {
+        color: white;
+        display: inline-block;
+    }
+    :nth-child(4) {
+        font-size: 1.5em;
+        padding-bottom: 1em;
+        display: inline-block;
+    }
+    :nth-child(5) {
+        font-size: 1em;
+        display: block;
+    }
+    :nth-child(6) {
+        font-size: 1em;
+        display: inline-block;
+    }
 }
 
 .ticket-header {
@@ -61,14 +126,45 @@ h3 {
         display: inline-block;
     }
     :nth-child(1) {
+        font-size: 2em;
         display: block;
-        color: red;
+        color: black;
+        margin-left: 2em;
     }
     :nth-child(2) {
-        color: yellow;
+        font-size: 2em;
+        color: black;
+        margin-left: 2em;
     }
     :nth-child(3) {
-        color: blue;
+        color: rgba(6,188,212,1);
+    }
+}
+
+.roster-content {
+    margin: 14em 0 0 5em;
+    max-width: 35%;
+    color: $color-text-body-background;
+    span {
+        display: block;
+        margin-bottom: 2em;
+    }
+}
+
+.schedule-header {
+    // padding-top: 2em;
+    span {
+        display: inline-block;
+    }
+    :nth-child(1) {
+        font-size: 2em;
+        color: black;
+        
+    }
+    :nth-child(2) {
+        font-size: 1em;
+        color: black;
+        
     }
 }
 
