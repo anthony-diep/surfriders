@@ -58,15 +58,36 @@ section {
 .hero {
     background: black;
     text-align: left;
-    padding: 6em 0;
+    padding: 0;
     color: white;
     min-height: 100vh; //This increases the height of the hero
-    display: grid;
-    // place-items: center; //These vertically center items/text in the hero
+    display: flex;
+    width: 100%;
+    justify-content: center;
 
-.container {
-    // width: 100%; //This overrides the container
-}
+    .image-wrapper {
+        width: 50%;
+    
+        height: 100vh;
+        text-align: right;
+
+        img {
+            display: inline-block;
+            object-fit: cover;
+            // max-width: none;
+            height: 100%;
+        }
+        // width: 100%; //This overrides the container
+    }
+
+    .text-wrapper {
+        width: 50%;
+        
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 1em;
+    }
+
 
     h1, h2 {
         margin-bottom: .25em;
@@ -75,4 +96,52 @@ section {
     p {
         margin: 1em auto;
     }
+}
+
+/*NEWS*/
+#news {
+    padding: 0;
+}
+
+.news {
+    img {
+        object-fit: cover;
+    }
+}
+
+/*TICKET*/
+#ticket {
+    padding: 0;
+}
+
+/*HISTORY*/
+#history {
+    background-color: #283847;
+    color: white;
+    padding-bottom: 0;
+
+    .container {
+        max-width: 1300px;
+    }
+
+    h3 {
+        color: white;
+        text-transform: lowercase;
+        font-size: 3vw;
+        span {
+            color: #06BCD4;
+            text-transform: uppercase;
+            font-size: 10vw;
+        }
+    }
+    
+    img {
+        display: inline-block;
+        padding: 16em 0 0 0;
+    }
+}
+
+/*TEAM*/
+#team {
+    padding: 0;
 }

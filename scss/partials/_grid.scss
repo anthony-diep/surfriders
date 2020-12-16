@@ -27,7 +27,44 @@ $gridgap: 2%;
     &.align-top {
         align-items: flex-start;
     }
+    &.align-bottom {
+        align-items: flex-end;
+    }
+    $gridgap-thin: .2%;
 
+    &.thin-margin {
+        margin-left: -($gridgap-thin / 2);
+        margin-right: -($gridgap-thin / 2);
+        margin-bottom: ($gridgap-thin / 2);
+        > * {
+            margin: ($gridgap-thin / 2);
+        }
+        @media (min-width: $breakpoint-small) {
+            .one-third {
+                width: 33.3333% - $gridgap-thin;
+            }
+            .two-thirds {
+                width: 66.66% - $gridgap-thin;
+            }
+        }
+    }
+
+    &.no-margin {
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+        > * { 
+            margin: 0;
+        }
+        @media (min-width: $breakpoint-small) {
+            .one-third {
+                width: 33.3333%;
+            }
+            .two-thirds {
+                width: 66.66%;
+            }
+        }
+    }
 
     @media (min-width: $breakpoint-small) {
 

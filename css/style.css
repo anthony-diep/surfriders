@@ -58,10 +58,22 @@ h1 {
   font-size: 3em;
   line-height: 1;
 }
+h1.ticket-header {
+  font-size: 12em;
+  margin: 0 0 0.1em 0;
+}
+h1.schedule-header {
+  font-size: 10em;
+  font-size: 10vw;
+  line-height: 0.7;
+}
 
 h2 {
   font-size: 2.25em;
   line-height: 1.1;
+}
+h2.ticket-header {
+  font-size: 5em;
 }
 
 h3 {
@@ -69,9 +81,26 @@ h3 {
   line-height: 1.2;
 }
 
+.ticket-header span {
+  display: inline-block;
+}
+.ticket-header :nth-child(1) {
+  display: block;
+  color: red;
+}
+.ticket-header :nth-child(2) {
+  color: yellow;
+}
+.ticket-header :nth-child(3) {
+  color: blue;
+}
+
 /* LIMIT NUMBER OF CHARACTERS PER LINE */
 p {
   max-width: 40em;
+}
+p.footer {
+  color: white;
 }
 
 /* LINKS */
@@ -141,8 +170,23 @@ hr {
   border-bottom: 5px solid rgba(255, 255, 255, 0);
 }
 .hero-button:hover {
-  border-bottom-color: white;
+  border-bottom-color: #ff5722;
   color: #ff5722;
+}
+
+.jumbo-button {
+  background-color: black;
+  color: white;
+  font-size: 3em;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8em 0 0 1em;
+  width: 100%;
+  height: 100%;
+}
+.jumbo-button:hover {
+  background-color: #bebebe;
+  color: white;
 }
 
 /* RESPONSIVE IMAGES */
@@ -158,13 +202,9 @@ body {
 
 /* CONTAINER */
 .container {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 1em;
-}
-.container.news {
-  margin: 0;
-  padding: 0;
 }
 
 /* MEDIA QUERIES */
@@ -207,6 +247,41 @@ body {
 }
 .row.align-top {
   align-items: flex-start;
+}
+.row.align-bottom {
+  align-items: flex-end;
+}
+.row.thin-margin {
+  margin-left: -0.1%;
+  margin-right: -0.1%;
+  margin-bottom: 0.1%;
+}
+.row.thin-margin > * {
+  margin: 0.1%;
+}
+@media (min-width: 768px) {
+  .row.thin-margin .one-third {
+    width: 33.1333%;
+  }
+  .row.thin-margin .two-thirds {
+    width: 66.46%;
+  }
+}
+.row.no-margin {
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+.row.no-margin > * {
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .row.no-margin .one-third {
+    width: 33.3333%;
+  }
+  .row.no-margin .two-thirds {
+    width: 66.66%;
+  }
 }
 @media (min-width: 768px) {
   .row > * {
@@ -307,10 +382,28 @@ section {
 .hero {
   background: black;
   text-align: left;
-  padding: 6em 0;
+  padding: 0;
   color: white;
   min-height: 100vh;
-  display: grid;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.hero .image-wrapper {
+  width: 50%;
+  height: 100vh;
+  text-align: right;
+}
+.hero .image-wrapper img {
+  display: inline-block;
+  object-fit: cover;
+  height: 100%;
+}
+.hero .text-wrapper {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1em;
 }
 .hero h1, .hero h2 {
   margin-bottom: 0.25em;
@@ -318,6 +411,49 @@ section {
 }
 .hero p {
   margin: 1em auto;
+}
+
+/*NEWS*/
+#news {
+  padding: 0;
+}
+
+.news img {
+  object-fit: cover;
+}
+
+/*TICKET*/
+#ticket {
+  padding: 0;
+}
+
+/*HISTORY*/
+#history {
+  background-color: #283847;
+  color: white;
+  padding-bottom: 0;
+}
+#history .container {
+  max-width: 1300px;
+}
+#history h3 {
+  color: white;
+  text-transform: lowercase;
+  font-size: 3vw;
+}
+#history h3 span {
+  color: #06BCD4;
+  text-transform: uppercase;
+  font-size: 10vw;
+}
+#history img {
+  display: inline-block;
+  padding: 16em 0 0 0;
+}
+
+/*TEAM*/
+#team {
+  padding: 0;
 }
 
 .hide-visually {
@@ -357,4 +493,25 @@ section {
   display: inline-block;
   padding: 1em;
   line-height: 1;
+}
+
+.hover-block {
+  position: relative;
+  overflow: hidden;
+}
+.hover-block .hover-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translate(100%, 0);
+  transition: all 0.4s ease-out;
+}
+.hover-block .hover-content.from-bottom {
+  transform: translate(0, 100%);
+}
+.hover-block:hover .hover-content {
+  transform: translate(0, 0);
 }

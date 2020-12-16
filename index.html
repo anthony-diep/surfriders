@@ -29,11 +29,11 @@
 
             </h2>
             <ul>
-                <li><a href="News.html">News</a></li>
-                <li><a href="ticket.html">Ticket</a></li>
-                <li><a href="history.html">History</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#ticket">Ticket</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#schedule">Schedule</a></li>
             </ul>
         </nav>
     </header>
@@ -41,40 +41,65 @@
     <main class="site-main">
 
         <section class="hero animate-on-scroll">
-            <div class="container">
-                <h1>20–21 SEASON</h1>
-                <h2>INDIVIDUAL & GROUP</h2>
-                <h2>TICKETS NOW AVAILABLE</h2>
-                <p>Excitement Awaits You <a href="#ticket" class="hero-button">HERE</a></p>
+            <div class="text-wrapper">
+                <div>
+                    <h1>20–21 SEASON</h1>
+                    <h2>INDIVIDUAL & GROUP</h2>
+                    <h2>TICKETS NOW AVAILABLE</h2>
+                    <p>Excitement Awaits You <a href="#ticket" class="hero-button">HERE</a></p>
+                </div>
+            </div>
+            <div class="image-wrapper">
+                <img src="img/arms-with-lines.jpg" alt="arms">
             </div>
         </section>
 
 
         <section id="news">
-            <div class="container news">
-
-                <div class="row">
+            <div class="news">
+                <h2 class="hide-visually">News</h2>
+                <div class="row no-margin">
                     <div class="one-third">
                         <img src="img/prospects.jpg" alt="Prospects">
-                        <img src="http://via.placeholder.com/1600x1200" alt="Placeholder">
+                    </div>
+                    <div class="one-third">
+                        <img src="img/news02.jpg" alt="News Block">
+                    </div>
+                    <div class="one-third hover-block">
                         <img src="img/endorsement.jpg" alt="Endorsement">
+                        <div class="hover-content from-bottom">
+                            <h3>ENDORSEMENT DEAL</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque sint amet deleniti.
+                                Molestiae labore odit possimus delectus dolore accusamus itaque tempora! Eligend</p>
+                            <a href="#" class="button">READ MORE</a>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row no-margin">
                     <div class="one-third">
                         <img src="img/dining.jpg" alt="Dining">
+                    </div>
+                    <div class="one-third">
                         <img src="img/package.jpg" alt="Fan Package">
+                    </div>
+                    <div class="one-third">
                         <img src="img/fan.jpg" alt="Fan Nights">
                     </div>
                 </div>
-                <div class="row">
-                    <div class="one-third">
-                        <img src="img/jersey.jpg" alt="Jersey">
-                        <img src="img/schedule.jpg" alt="Season Schedule">
-                        <img src="img/stadium.jpg" alt="Arena">
-                    </div>
+            </div>
+            <div class="row no-margin">
+                <div class="one-third">
+                    <img src="img/jersey.jpg" alt="Jersey">
                 </div>
-                <!-- <div class="one-third">
+                <div class="one-third">
+                    <img src="img/schedule.jpg" alt="Season Schedule">
+                </div>
+                <div class="one-third">
+                    <img src="img/stadium.jpg" alt="Arena">
+                </div>
+            </div>
+            </div>
+            <!-- <div class="one-third">
                     <h3>News</h3>
                     <a href="#" class="button">Button</a>
                 </div> -->
@@ -82,18 +107,27 @@
         </section>
 
         <section id="ticket" class="animate-on-scroll">
-            <div class="container">
 
-                <div class="row">
-                    <!-- <div class="one-half animate-scale-in">
-                        <img src="http://via.placeholder.com/1600x1200" alt="Placeholder">
-                    </div> -->
-                    <div class="one-half animate-slide-up">
-                        <h3>20–21 Ticket Options</h3>
-                        <a href="#" class="button">Button</a>
-                    </div>
+            <!-- <div class="section-header">
+                <h1 class="ticket-header">20–21</h1>
+                <h2 class="ticket-header">TICKET OPTIONS</h2>
+                <a href="#" class="jumbo-button">Buy Tickets</a>
+            </div> -->
+
+            <div class="row no-margin align-bottom">
+                <div class="two-thirds">
+                    <h2 class="ticket-header">
+                        <span>20–21</span>
+                        <span>TICKET</span>
+                        <span>OPTIONS</span>
+                    </h2>
                 </div>
+                <div class="one-third">
+                    <a href="#" class="jumbo-button">Buy Tickets</a>
+                </div>
+            </div>
 
+            <div class="container">
                 <div class="row">
                     <div class="one-half animate-scale-in">
                         <img src="img/hangout.jpg" alt="Single Game">
@@ -146,17 +180,15 @@
                             personal functions and events.</p>
                     </div>
                 </div>
+                <p>Purchase tickets or contact our sales team<a href="#ticket" class="hero-button">HERE</a></p>
         </section>
 
-        <section id="history" class="animate-on-scroll">
+        <section id="history">
             <div class="container">
 
-                <div class="row stacked">
-                    <div class="one-half animate-scale-in">
-                        <img src="img/james-final.jpg" alt="Team History">
-                    </div>
-                    <div class="one-half animate-slide-up">
-                        <h3>Team History</h3>
+                <div class="row thin-margin">
+                    <div class="one-whole">
+                        <h3>Team <span>History</span></h3>
                         <p>In 1997, Arthur Lee and the Nexus Group successfully lobbied for an expansion
                             team to establish home in Las Vegas. The following season, the Las Vegas
                             Dealers played their first game at MGM arena. In its inaugural season, Las
@@ -182,44 +214,90 @@
                             conclusion of the season.</p>
                     </div>
                 </div>
+
+                <img src="img/james-final.png" alt="Team History">
+
         </section>
 
         <section id="team" class="animate-on-scroll">
-            <div class="container">
+            <div class="team">
 
-                <div class="row">
+                <div class="row thin-margin">
                     <div class="one-third">
-                        <img src="http://via.placeholder.com/1600x1200" alt="Placeholder">
+                        <img src="img/roster01.jpg" alt="Roster Block">
+                    </div>
+                    <div class="one-third">
                         <img src="img/lebron-james.png" alt="Lebron">
+                    </div>
+                    <div class="one-third">
                         <img src="img/wade.png" alt="Wade">
                     </div>
                 </div>
-                <div class="row">
+
+                <div class="row thin-margin">
                     <div class="one-third">
-                        <img src="http://via.placeholder.com/1600x1200" alt="Placeholder">
+                        <img src="img/roster02.jpg" alt="Roster Block2">
+                    </div>
+                    <div class="one-third">
                         <img src="img/cp.png" alt="Chris Paul">
-                        <img src="img/fan.jpg" alt="Fan Nights">
+                    </div>
+                    <div class="one-third">
+                        <img src="img/melo.png" alt="Carmelo">
                     </div>
                 </div>
-                <div class="row">
+                <div class="row thin-margin">
                     <div class="one-third">
-                        <img src="img/jersey.jpg" alt="Jersey">
-                        <img src="img/schedule.jpg" alt="Season Schedule">
-                        <img src="img/stadium.jpg" alt="Arena">
+                        <img src="img/turner.png" alt="Myles Turner">
+                    </div>
+                    <div class="one-third">
+                        <img src="img/lin.png" alt="Jeremy">
+                    </div>
+                    <div class="one-third">
+                        <img src="img/hachimura.png" alt="Hachimura">
                     </div>
                 </div>
-                <div class="row">
+                <div class="row thin-margin">
                     <div class="one-third">
-                        <img src="img/jersey.jpg" alt="Jersey">
-                        <img src="img/schedule.jpg" alt="Season Schedule">
-                        <img src="img/stadium.jpg" alt="Arena">
+                        <img src="img/bol.png" alt="Bol Bol">
+                    </div>
+                    <div class="one-third">
+                        <img src="img/rose.png" alt="Derrick Rose">
+                    </div>
+                    <div class="one-third">
+                        <img src="img/howard.png" alt="Dwight Howard">
                     </div>
                 </div>
-                <div class="row">
+                <div class="row thin-margin">
                     <div class="one-third">
-                        <img src="img/jersey.jpg" alt="Jersey">
-                        <img src="img/schedule.jpg" alt="Season Schedule">
-                        <img src="img/stadium.jpg" alt="Arena">
+                        <img src="img/hield.png" alt="Buddy Hield">
+                    </div>
+                    <div class="one-third">
+                        <img src="img/watanabe.png" alt="Watanabe">
+                    </div>
+                    <div class="one-third">
+                        <img src="img/covington.png" alt="Covington">
+                    </div>
+                </div>
+                <div class="row thin-margin">
+                    <div class="one-third">
+
+                    </div>
+                    <div class="one-third">
+                        <img src="img/schedule-block.jpg" alt="Schedule Block">
+                    </div>
+                    <div class="one-third">
+
+                    </div>
+                </div>
+                <div class="row thin-margin">
+                    <div class="one-third">
+
+                    </div>
+                    <div class="one-third">
+                        <h1 class="schedule-header">SCHEDULE</h1>
+                    </div>
+                    <div class="one-third">
+
                     </div>
                 </div>
         </section>
@@ -240,7 +318,8 @@
 
     <footer class="site-footer">
         <div class="copyright">
-            <p>Copyright © 2020 NBA Media Ventures, LLC. All rights reserved. No portion of NBA.com may be duplicated,
+            <p class="footer">Copyright © 2020 NBA Media Ventures, LLC. All rights reserved. No portion of NBA.com may
+                be duplicated,
                 redistributed or manipulated in any form. This site is operated jointly by NBA and WarnerMedia.
                 To opt out of the sale of your personal information as permitted by the California Consumer Privacy Act,
                 please use the links below to visit each company’s privacy center. If you make a request through the
